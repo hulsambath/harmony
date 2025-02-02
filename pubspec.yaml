@@ -14,8 +14,6 @@ dependencies:
 
   cupertino_icons: ^1.0.6
   flutter_launcher_icons: ^0.14.2
-  # macros
-  macros: ^0.1.2-main.4
   flutter_gen: ^5.8.0
 
 dev_dependencies:
@@ -33,7 +31,6 @@ flutter:
     - path: assets/sambath/staging/icons/
       flavors:
         - sambathStg
-
   # fonts:
   #   - family: Schyler
   #     fonts:
