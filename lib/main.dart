@@ -46,7 +46,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Column(
         children: [
           SizedBox.square(
-            child: Image.asset(Assets.sambath.staging.icons.icon.path),
+            child: Image.asset(Assets.quartz.staging.icons.quartz.path),
           ),
         ],
       ),

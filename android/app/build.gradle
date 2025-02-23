@@ -58,9 +58,9 @@ android {
 
     flavorDimensions "dimension", "flavor"
     productFlavors {
-        twentythree {
+        quartz {
             dimension "dimension"
-            applicationId "com.harmony.twentythree" // or you can 'com.harmony.app.sambath'
+            applicationId "com.harmony.quartz"
         }
 
         sambath {

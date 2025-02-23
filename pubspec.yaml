@@ -31,6 +31,9 @@ flutter:
     - path: assets/sambath/staging/icons/
       flavors:
         - sambathStg
+    - path: assets/quartz/staging/icons/
+      flavors:
+        - quartzStg
   # fonts:
   #   - family: Schyler
   #     fonts:

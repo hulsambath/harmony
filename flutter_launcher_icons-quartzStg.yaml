@@ -1,0 +1,27 @@
+flutter_icons:
+  android: true
+  ios: true
+  remove_alpha_ios: true
+  image_path: "assets/quartz/staging/icons/quartz.png"
+  adaptive_icon_background: "#242424"
+  adaptive_icon_foreground: "assets/quartz/staging/icons/quartz.png"
+  min_sdk_android: 21
+
+  flavors:
+    quartzStg:
+      image_path: "assets/quartz/staging/icons/quartz.png"
+      background_color: "#242424"
+      theme_color: "#0064C8"
+      android: true
+      ios: true
+      web:
+        generate: true
+        image_path: "assets/quartz/staging/icons/quartz.png"
+        background_color: "#000000"
+        theme_color: "#000000"
+      windows:
+        generate: true
+        image_path: "assets/quartz/staging/icons/quartz.png"
+      macos:
+        generate: true
+        image_path: "assets/quartz/staging/icons/quartz.png"
