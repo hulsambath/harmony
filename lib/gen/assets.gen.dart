@@ -9,6 +9,13 @@
 
 import 'package:flutter/widgets.dart';
 
+class $AssetsQuartzGen {
+  const $AssetsQuartzGen();
+
+  /// Directory path: assets/quartz/staging
+  $AssetsQuartzStagingGen get staging => const $AssetsQuartzStagingGen();
+}
+
 class $AssetsSambathGen {
   const $AssetsSambathGen();
 
@@ -16,11 +23,37 @@ class $AssetsSambathGen {
   $AssetsSambathStagingGen get staging => const $AssetsSambathStagingGen();
 }
 
+class $AssetsQuartzStagingGen {
+  const $AssetsQuartzStagingGen();
+
+  /// Directory path: assets/quartz/staging/icons
+  $AssetsQuartzStagingIconsGen get icons => const $AssetsQuartzStagingIconsGen();
+}
+
 class $AssetsSambathStagingGen {
   const $AssetsSambathStagingGen();
 
   /// Directory path: assets/sambath/staging/icons
   $AssetsSambathStagingIconsGen get icons => const $AssetsSambathStagingIconsGen();
+}
+
+class $AssetsQuartzStagingIconsGen {
+  const $AssetsQuartzStagingIconsGen();
+
+  /// File path: assets/quartz/staging/icons/icon.png
+  AssetGenImage get icon => const AssetGenImage(
+        'assets/quartz/staging/icons/icon.png',
+        flavors: {'quartzStg'},
+      );
+
+  /// File path: assets/quartz/staging/icons/quartz.png
+  AssetGenImage get quartz => const AssetGenImage(
+        'assets/quartz/staging/icons/quartz.png',
+        flavors: {'quartzStg'},
+      );
+
+  /// List of all assets
+  List<AssetGenImage> get values => [icon, quartz];
 }
 
 class $AssetsSambathStagingIconsGen {
@@ -32,13 +65,20 @@ class $AssetsSambathStagingIconsGen {
         flavors: {'sambathStg'},
       );
 
+  /// File path: assets/sambath/staging/icons/quart.png
+  AssetGenImage get quart => const AssetGenImage(
+        'assets/sambath/staging/icons/quart.png',
+        flavors: {'sambathStg'},
+      );
+
   /// List of all assets
-  List<AssetGenImage> get values => [icon];
+  List<AssetGenImage> get values => [icon, quart];
 }
 
 class Assets {
   Assets._();
 
+  static const $AssetsQuartzGen quartz = $AssetsQuartzGen();
   static const $AssetsSambathGen sambath = $AssetsSambathGen();
 }
 
