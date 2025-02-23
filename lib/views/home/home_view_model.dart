@@ -1,4 +1,4 @@
-import '../../widgets/state_container.dart';
+import 'package:harmony/widgets/state_container.dart';
 
 class HomeViewModel extends LocalViewModel {
   int _counter = 0;

@@ -41,16 +41,10 @@ class $AssetsQuartzStagingIconsGen {
   const $AssetsQuartzStagingIconsGen();
 
   /// File path: assets/quartz/staging/icons/icon.png
-  AssetGenImage get icon => const AssetGenImage(
-        'assets/quartz/staging/icons/icon.png',
-        flavors: {'quartzStg'},
-      );
+  AssetGenImage get icon => const AssetGenImage('assets/quartz/staging/icons/icon.png', flavors: {'quartzStg'});
 
   /// File path: assets/quartz/staging/icons/quartz.png
-  AssetGenImage get quartz => const AssetGenImage(
-        'assets/quartz/staging/icons/quartz.png',
-        flavors: {'quartzStg'},
-      );
+  AssetGenImage get quartz => const AssetGenImage('assets/quartz/staging/icons/quartz.png', flavors: {'quartzStg'});
 
   /// List of all assets
   List<AssetGenImage> get values => [icon, quartz];
@@ -60,34 +54,21 @@ class $AssetsSambathStagingIconsGen {
   const $AssetsSambathStagingIconsGen();
 
   /// File path: assets/sambath/staging/icons/icon.png
-  AssetGenImage get icon => const AssetGenImage(
-        'assets/sambath/staging/icons/icon.png',
-        flavors: {'sambathStg'},
-      );
-
-  /// File path: assets/sambath/staging/icons/quart.png
-  AssetGenImage get quart => const AssetGenImage(
-        'assets/sambath/staging/icons/quart.png',
-        flavors: {'sambathStg'},
-      );
+  AssetGenImage get icon => const AssetGenImage('assets/sambath/staging/icons/icon.png', flavors: {'sambathStg'});
 
   /// List of all assets
-  List<AssetGenImage> get values => [icon, quart];
+  List<AssetGenImage> get values => [icon];
 }
 
 class Assets {
-  Assets._();
+  const Assets._();
 
   static const $AssetsQuartzGen quartz = $AssetsQuartzGen();
   static const $AssetsSambathGen sambath = $AssetsSambathGen();
 }
 
 class AssetGenImage {
-  const AssetGenImage(
-    this._assetName, {
-    this.size,
-    this.flavors = const {},
-  });
+  const AssetGenImage(this._assetName, {this.size, this.flavors = const {}});
 
   final String _assetName;
 
@@ -115,7 +96,7 @@ class AssetGenImage {
     bool gaplessPlayback = true,
     bool isAntiAlias = false,
     String? package,
-    FilterQuality filterQuality = FilterQuality.low,
+    FilterQuality filterQuality = FilterQuality.medium,
     int? cacheWidth,
     int? cacheHeight,
   }) {
@@ -147,15 +128,8 @@ class AssetGenImage {
     );
   }
 
-  ImageProvider provider({
-    AssetBundle? bundle,
-    String? package,
-  }) {
-    return AssetImage(
-      _assetName,
-      bundle: bundle,
-      package: package,
-    );
+  ImageProvider provider({AssetBundle? bundle, String? package}) {
+    return AssetImage(_assetName, bundle: bundle, package: package);
   }
 
   String get path => _assetName;

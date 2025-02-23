@@ -1,0 +1,56 @@
+{
+  "Harmony View": {
+    "prefix": "view",
+    "body": [
+      "part of '${TM_FILENAME_BASE/(.*)_view/$1/}.dart';",
+      "",
+      "class _${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} extends StatelessWidget {",
+      "  const _${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}({required this.viewModel});",
+      "",
+      "  final ${TM_FILENAME_BASE/(.*)_view/${1:/pascalcase}/}ViewModel viewModel;",
+      "",
+      "  @override",
+      "  Widget build(BuildContext context) {",
+      "    return const Placeholder();",
+      "  }",
+      "}",
+      "",
+    ]
+  },
+  "Harmony View Model": {
+    "prefix": "view_model",
+    "body": [
+      "import 'package:harmony/widgets/state_container.dart';",
+      "",
+      "class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} extends LocalViewModel {}",
+      "",
+    ]
+  },
+  "Harmony": {
+    "prefix": "screen",
+    "body": [
+      "import 'package:flutter/material.dart';",
+      "import 'package:harmony/views/${TM_FILENAME_BASE/(.*)/$1/}/${TM_FILENAME_BASE/(.*)/$1/}_view_model.dart';",
+      "import 'package:harmony/widgets/state_container.dart';",
+      "",
+      "part '${TM_FILENAME_BASE/(.*)/$1_view/}.dart';",
+      "",
+      "class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} extends StatelessWidget {",
+      "  const ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}({super.key, required this.title});",
+      "",
+      "  final String title;",
+      "",
+      "  @override",
+      "  Widget build(BuildContext context) {",
+      "    return StateContainer(",
+      "      viewModel: ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}ViewModel(),",
+      "      builder: (context, viewModel) {",
+      "        return _${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}View(viewModel: viewModel);",
+      "      },",
+      "    );",
+      "  }",
+      "}",
+      "",
+    ]
+  },
+}

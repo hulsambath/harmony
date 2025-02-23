@@ -1,14 +1,9 @@
-import 'package:flutter/material.dart';
-import 'package:harmony/core/global/global_state_wrapper.dart';
-import 'package:harmony/views/home/home_view_model.dart';
+part of 'home.dart';
 
-class HomeScreen extends StatelessWidget {
+class _HomeView extends StatelessWidget {
   final HomeViewModel viewModel;
 
-  const HomeScreen({
-    super.key,
-    required this.viewModel,
-  });
+  const _HomeView({required this.viewModel});
 
   @override
   Widget build(BuildContext context) {
