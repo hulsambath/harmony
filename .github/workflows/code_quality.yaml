@@ -8,7 +8,7 @@ jobs:
 
     strategy:
       matrix:
-        flutter_version: [3.24.4]
+        flutter_version: [3.29.0]
         flutter_path: ["/opt/hostedtoolcache/flutter"]
 
     steps:
